@@ -23,7 +23,8 @@ val sharedSettings = Seq(
 
   scalaVersion := "2.12.4",
   organization := "com.lihaoyi",
-  version := _root_.ammonite.Constants.version,
+  //version := _root_.ammonite.Constants.version,
+  version := "phi9t",
   libraryDependencies += "com.lihaoyi" %% "utest" % "0.6.0" % Test,
   // Needed for acyclic to work...
   testFrameworks := Seq(new TestFramework("utest.runner.Framework")),
@@ -31,7 +32,7 @@ val sharedSettings = Seq(
   scalacOptions += "-P:acyclic:force",
   autoCompilerPlugins := true,
   addCompilerPlugin("com.lihaoyi" %% "acyclic" % "0.1.7"),
-  ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) },
+  //ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) },
   parallelExecution in Test := false,
   resolvers += Resolver.sonatypeRepo("releases"),
   (unmanagedSources in Compile) += (baseDirectory in ThisBuild).value/"project"/"Constants.scala",
